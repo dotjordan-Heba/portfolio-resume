@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fefae0;
+    color: #0a2342;
+    line-height: 1.7;
+}
+
+h1, h2, h3 { 
+    color: #175676; 
+}
+
+a { 
+    text-decoration: none; 
+    color:#d4a373; 
+}
+
+header {
+    background-color: #0a2342;
+    color: #d4a373;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    transition: color 0.5s #4ba3c3;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #4ba3c3;
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 70px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-text h1 { 
+    font-size: 35px; 
+}
+
+.about-text h2 { 
+    font-size: 20px; 
+    color: #4ba3c3; 
+    margin-bottom: 10px; 
+}
+
+.info-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.info-group div:first-child { 
+    font-weight: bold; 
+    color: #175676; 
+}
+
+#portfolio {
+    padding: 60px 50px;
+    background-color: #d4a3739a;
+    text-align: center;
+}
+
+#portfolio h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fef8e0e5;
+    width: 350px;
+    border-radius: 10px;
+    border-bottom: 5px solid #d4a373;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.card:hover {
+    transform: scale(1.15); 
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #0a2342;
+    margin-bottom: 10px;
+}
+
+.card-desc {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-btn {
+    align-self: flex-start;
+    background-color: #175676;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.card-btn:hover { 
+    background-color: #0a2342; 
+}
+
+#contact {
+    padding: 70px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#contact h2 { 
+    font-size: 32px; 
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #4ba3c3;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+.contact-form textarea { 
+    resize: vertical; 
+    min-height: 120px; 
+}
+
+.submit-btn {
+    background-color: #d4a373;
+    color: #0a2342;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0a2342;
+    color: #d4a373;
+}
+
+footer {
+    background-color: #0a2342;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a { 
+    color: #d4a373; 
+    transition: color 0.3s ease; 
+}
+
+.social-links a:hover { 
+    color: #5abce0; 
+}
+
+@media (max-width: 768px) {
+    header { 
+        flex-direction: column; 
+        padding: 15px 20px; 
+        gap: 15px; 
+    }
+    
+    .nav-links {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .nav-links audio {
+        width: 250px; 
+    }
+
+    #about, #portfolio, #contact {
+        padding: 50px 20px;
+    }
+}
